@@ -1,16 +1,31 @@
 = to_json_fix
 
-Description goes here.
+    class Time
+      def to_json(*)
+        super nil
+      end
+    end
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+    class Date
+      def to_json(*)
+        super nil
+      end
+    end
+
+    class Symbol
+      def to_json(*)
+        to_s.to_json
+      end
+    end
+
+    if defined?(ActiveSupport::HashWithIndifferentAccess)
+      class ActiveSupport::HashWithIndifferentAccess
+        def to_json(*)
+          to_hash.to_json
+        end
+      end
+    end
+
 
 == Copyright
 
