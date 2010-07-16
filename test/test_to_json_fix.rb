@@ -20,4 +20,10 @@ class TestToJsonFix < Test::Unit::TestCase
   should "to_json a HashWithIndifferentAccess" do
     assert_equal "{\"a\":\"b\"}", ActiveSupport::HashWithIndifferentAccess.new(:a => :b).to_json
   end
+
+  should "to_json an ActiveRecord::Base" do
+    assert_nothing_raised do
+      { :a => ActiveRecord::Base.new }.to_json
+    end
+  end
 end

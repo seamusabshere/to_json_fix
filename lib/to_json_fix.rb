@@ -31,3 +31,11 @@ if defined?(ActiveSupport::HashWithIndifferentAccess)
     end
   end
 end
+
+if defined?(ActiveRecord::Base)
+  class ActiveRecord::Base
+    def to_json(*args)
+      super nil
+    end
+  end
+end
