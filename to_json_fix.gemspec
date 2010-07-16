@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Seamus Abshere"]
   s.date = %q{2010-07-16}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{Until ActiveSupport gets its act together, fix to_json ArgumentError (2 for 1), StackLevelTooDeep, etc. errors}
   s.email = %q{seamus@abshere.net}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -25,13 +25,14 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/to_json_fix.rb",
      "test/helper.rb",
-     "test/test_to_json_fix.rb"
+     "test/test_to_json_fix.rb",
+     "to_json_fix.gemspec"
   ]
   s.homepage = %q{http://github.com/seamusabshere/to_json_fix}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{Fix to_json ArgumentError (2 for 1), StackLevelTooDeep, etc. errors}
   s.test_files = [
     "test/helper.rb",
      "test/test_to_json_fix.rb"
