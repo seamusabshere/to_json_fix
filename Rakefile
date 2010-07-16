@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "to_json_fix"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Fix to_json ArgumentError (2 for 1), StackLevelTooDeep, etc. errors}
+    gem.description = %Q{Until ActiveSupport gets its act together, fix to_json ArgumentError (2 for 1), StackLevelTooDeep, etc. errors}
     gem.email = "seamus@abshere.net"
     gem.homepage = "http://github.com/seamusabshere/to_json_fix"
     gem.authors = ["Seamus Abshere"]
